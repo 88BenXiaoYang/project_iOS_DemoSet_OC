@@ -16,6 +16,7 @@
 		02CFA3A721AEDA5500BCE056 /* project_iOS_DemoSet_OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CFA3A621AEDA5500BCE056 /* project_iOS_DemoSet_OCUITests.m */; };
 		7C029AE621AF9F6700E48EC3 /* BYVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AE521AF9F6700E48EC3 /* BYVCManager.m */; };
 		7C029AE921AFA08600E48EC3 /* BYHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AE821AFA08600E48EC3 /* BYHomePageViewController.m */; };
+		7C029AED21B0D4B000E48EC3 /* BYSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AEC21B0D4B000E48EC3 /* BYSlideView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		7C029AE521AF9F6700E48EC3 /* BYVCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYVCManager.m; sourceTree = "<group>"; };
 		7C029AE721AFA08600E48EC3 /* BYHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYHomePageViewController.h; sourceTree = "<group>"; };
 		7C029AE821AFA08600E48EC3 /* BYHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYHomePageViewController.m; sourceTree = "<group>"; };
+		7C029AEB21B0D4B000E48EC3 /* BYSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSlideView.h; sourceTree = "<group>"; };
+		7C029AEC21B0D4B000E48EC3 /* BYSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYSlideView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,7 @@
 		7C029ADF21AF9D8100E48EC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7C029AEA21B0D48600E48EC3 /* slideView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +179,15 @@
 				7C029AE521AF9F6700E48EC3 /* BYVCManager.m */,
 			);
 			path = VCManager;
+			sourceTree = "<group>";
+		};
+		7C029AEA21B0D48600E48EC3 /* slideView */ = {
+			isa = PBXGroup;
+			children = (
+				7C029AEB21B0D4B000E48EC3 /* BYSlideView.h */,
+				7C029AEC21B0D4B000E48EC3 /* BYSlideView.m */,
+			);
+			path = slideView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +324,7 @@
 				02CFA39221AEDA5500BCE056 /* main.m in Sources */,
 				7C029AE921AFA08600E48EC3 /* BYHomePageViewController.m in Sources */,
 				02CFA38421AEDA5300BCE056 /* AppDelegate.m in Sources */,
+				7C029AED21B0D4B000E48EC3 /* BYSlideView.m in Sources */,
 				7C029AE621AF9F6700E48EC3 /* BYVCManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
