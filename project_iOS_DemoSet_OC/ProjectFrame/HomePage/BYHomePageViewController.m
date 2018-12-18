@@ -9,7 +9,11 @@
 #import "BYHomePageViewController.h"
 #import "BYSlideView.h"
 
-@interface BYHomePageViewController ()
+@interface BYHomePageViewController () {
+    CGFloat _contentOffsetY;
+    CGFloat _oldContentOffsetY;
+    CGFloat _newContentOffsetY;
+}
 
 @property (nonatomic, assign) CGFloat screenWidth;
 @property (nonatomic, assign) CGFloat screenHeight;
@@ -31,6 +35,27 @@
 //    slideView.selectedIndex = 1;
 //    slideView.slideViewColor = [UIColor yellowColor];
     [self.view addSubview:slideView];
+}
+
+#pragma mark- delegate
+//判断滑动方向
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    _contentOffsetY = scrollView.contentOffset.y;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    _newContentOffsetY = scrollView.contentOffset.y;
+    if (_newContentOffsetY > _oldContentOffsetY && _oldContentOffsetY > _contentOffsetY) {
+        //向上滑动
+        //to do ...
+    } else if (_newContentOffsetY < _oldContentOffsetY && _oldContentOffsetY < _contentOffsetY) {
+        //向下滑动
+        //to do ...
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    _oldContentOffsetY = scrollView.contentOffset.y;
 }
 
 @end
