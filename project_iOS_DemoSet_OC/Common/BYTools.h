@@ -32,6 +32,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSMutableAttributedString *)handleContentText:(NSString *)contentText;
 
+/**
+ 十六进制颜色
+
+ @param hex 十六进制
+ @return 十六进制对应的颜色
+ */
+- (UIColor *)colorWithRGBHex:(UInt32)hex;
+
 @end
 
 NS_ASSUME_NONNULL_END
