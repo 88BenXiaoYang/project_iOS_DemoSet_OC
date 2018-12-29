@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0226D3C721D7D361002B50B4 /* BYBannerSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3C621D7D361002B50B4 /* BYBannerSlideView.m */; };
+		0226D3CB21D7E270002B50B4 /* BYBannerSliderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3CA21D7E270002B50B4 /* BYBannerSliderViewCell.m */; };
 		02CFA38421AEDA5300BCE056 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CFA38321AEDA5300BCE056 /* AppDelegate.m */; };
 		02CFA38A21AEDA5300BCE056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CFA38821AEDA5300BCE056 /* Main.storyboard */; };
 		02CFA38C21AEDA5500BCE056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CFA38B21AEDA5500BCE056 /* Assets.xcassets */; };
@@ -49,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0226D3C521D7D361002B50B4 /* BYBannerSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYBannerSlideView.h; sourceTree = "<group>"; };
+		0226D3C621D7D361002B50B4 /* BYBannerSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYBannerSlideView.m; sourceTree = "<group>"; };
+		0226D3C921D7E270002B50B4 /* BYBannerSliderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYBannerSliderViewCell.h; sourceTree = "<group>"; };
+		0226D3CA21D7E270002B50B4 /* BYBannerSliderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYBannerSliderViewCell.m; sourceTree = "<group>"; };
 		02CFA37F21AEDA5300BCE056 /* project_iOS_DemoSet_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project_iOS_DemoSet_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CFA38221AEDA5300BCE056 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		02CFA38321AEDA5300BCE056 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -125,6 +131,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0226D3C421D7D344002B50B4 /* bannerSlideView */ = {
+			isa = PBXGroup;
+			children = (
+				0226D3C521D7D361002B50B4 /* BYBannerSlideView.h */,
+				0226D3C621D7D361002B50B4 /* BYBannerSlideView.m */,
+			);
+			path = bannerSlideView;
+			sourceTree = "<group>";
+		};
+		0226D3C821D7E23C002B50B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0226D3C921D7E270002B50B4 /* BYBannerSliderViewCell.h */,
+				0226D3CA21D7E270002B50B4 /* BYBannerSliderViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		02CFA37621AEDA5300BCE056 = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +209,7 @@
 		7C029ADF21AF9D8100E48EC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0226D3C421D7D344002B50B4 /* bannerSlideView */,
 				7CEA539D21D3A2A90072C7C1 /* streamView */,
 				7C029AEA21B0D48600E48EC3 /* slideView */,
 			);
@@ -201,6 +226,7 @@
 		7C029AE121AF9DC500E48EC3 /* ProjectFrame */ = {
 			isa = PBXGroup;
 			children = (
+				0226D3C821D7E23C002B50B4 /* View */,
 				7C029AE321AF9ED000E48EC3 /* VCManager */,
 				7C029AE221AF9E5600E48EC3 /* HomePage */,
 			);
@@ -426,12 +452,14 @@
 				02CFA39221AEDA5500BCE056 /* main.m in Sources */,
 				7CEA53C621D3A5FB0072C7C1 /* MASViewAttribute.m in Sources */,
 				7C029AE921AFA08600E48EC3 /* BYHomePageViewController.m in Sources */,
+				0226D3CB21D7E270002B50B4 /* BYBannerSliderViewCell.m in Sources */,
 				7CEA53A321D3A31C0072C7C1 /* BYStreamViewCell.m in Sources */,
 				7CEA53C821D3A5FB0072C7C1 /* MASCompositeConstraint.m in Sources */,
 				7CEA53CB21D3A5FB0072C7C1 /* MASConstraintMaker.m in Sources */,
 				02CFA38421AEDA5300BCE056 /* AppDelegate.m in Sources */,
 				7CEA53C321D3A5FB0072C7C1 /* NSArray+MASAdditions.m in Sources */,
 				7CEA53CA21D3A5FB0072C7C1 /* MASLayoutConstraint.m in Sources */,
+				0226D3C721D7D361002B50B4 /* BYBannerSlideView.m in Sources */,
 				7C029AED21B0D4B000E48EC3 /* BYSlideView.m in Sources */,
 				7CEA53C521D3A5FB0072C7C1 /* ViewController+MASAdditions.m in Sources */,
 				7CDBEB6721BF5CF800FEC89A /* BYTools.m in Sources */,
