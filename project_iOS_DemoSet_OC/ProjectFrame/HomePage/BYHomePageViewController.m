@@ -10,6 +10,7 @@
 #import "BYSlideView.h"
 #import "BYStreamViewCell.h"
 #import "BYBannerSliderViewCell.h"
+#import "BYAvatarViewController.h"
 
 @interface BYHomePageViewController () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -55,6 +56,11 @@
     }
     
     return 196;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    BYAvatarViewController *avatarVC = [[BYAvatarViewController alloc] init];
+    [self.navigationController pushViewController:avatarVC animated:YES];
 }
 
 //判断滑动方向
