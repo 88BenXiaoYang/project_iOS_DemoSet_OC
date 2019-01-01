@@ -60,16 +60,16 @@
 		0226D3C621D7D361002B50B4 /* BYBannerSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYBannerSlideView.m; sourceTree = "<group>"; };
 		0226D3C921D7E270002B50B4 /* BYBannerSliderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYBannerSliderViewCell.h; sourceTree = "<group>"; };
 		0226D3CA21D7E270002B50B4 /* BYBannerSliderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYBannerSliderViewCell.m; sourceTree = "<group>"; };
-		0226D3CC21DB9186002B50B4 /* BYAvatarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYAvatarViewController.h; path = project_iOS_DemoSet_OC/ProjectFrame/View/BYAvatarViewController.h; sourceTree = SOURCE_ROOT; };
-		0226D3CD21DB9186002B50B4 /* BYAvatarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BYAvatarViewController.m; path = project_iOS_DemoSet_OC/ProjectFrame/View/BYAvatarViewController.m; sourceTree = SOURCE_ROOT; };
+		0226D3CC21DB9186002B50B4 /* BYAvatarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYAvatarViewController.h; path = project_iOS_DemoSet_OC/ViewController/BYAvatarViewController.h; sourceTree = SOURCE_ROOT; };
+		0226D3CD21DB9186002B50B4 /* BYAvatarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BYAvatarViewController.m; path = project_iOS_DemoSet_OC/ViewController/BYAvatarViewController.m; sourceTree = SOURCE_ROOT; };
 		0226D3D321DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StretchyHeaderCollectionViewLayout.h; sourceTree = "<group>"; };
 		0226D3D421DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StretchyHeaderCollectionViewLayout.m; sourceTree = "<group>"; };
 		0226D3D621DBA83E002B50B4 /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
 		0226D3D721DBA83E002B50B4 /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		0226D3D921DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StretchyAvatarCustomNavigationView.h; sourceTree = "<group>"; };
 		0226D3DA21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StretchyAvatarCustomNavigationView.m; sourceTree = "<group>"; };
-		0226D3DC21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYStretchyAvatarCollectionViewCell.h; path = project_iOS_DemoSet_OC/View/stretchyAvatar/BYStretchyAvatarCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		0226D3DD21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BYStretchyAvatarCollectionViewCell.m; path = project_iOS_DemoSet_OC/View/stretchyAvatar/BYStretchyAvatarCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		0226D3DC21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYStretchyAvatarCollectionViewCell.h; path = project_iOS_DemoSet_OC/ViewController/BYStretchyAvatarCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		0226D3DD21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BYStretchyAvatarCollectionViewCell.m; path = project_iOS_DemoSet_OC/ViewController/BYStretchyAvatarCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		02CFA37F21AEDA5300BCE056 /* project_iOS_DemoSet_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project_iOS_DemoSet_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CFA38221AEDA5300BCE056 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		02CFA38321AEDA5300BCE056 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -177,6 +177,17 @@
 			path = stretchyAvatar;
 			sourceTree = "<group>";
 		};
+		0226D3DF21DBC915002B50B4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0226D3CC21DB9186002B50B4 /* BYAvatarViewController.h */,
+				0226D3CD21DB9186002B50B4 /* BYAvatarViewController.m */,
+				0226D3DC21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.h */,
+				0226D3DD21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		02CFA37621AEDA5300BCE056 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +211,7 @@
 		02CFA38121AEDA5300BCE056 /* project_iOS_DemoSet_OC */ = {
 			isa = PBXGroup;
 			children = (
+				0226D3DF21DBC915002B50B4 /* ViewController */,
 				7CEA53A421D3A4AE0072C7C1 /* ThirdSDK */,
 				7CDBEB6421BF5CA700FEC89A /* Common */,
 				02CFA38221AEDA5300BCE056 /* AppDelegate.h */,
@@ -211,7 +223,6 @@
 				02CFA38821AEDA5300BCE056 /* Main.storyboard */,
 				7C029AE121AF9DC500E48EC3 /* ProjectFrame */,
 				7C029ADF21AF9D8100E48EC3 /* View */,
-				7C029AE021AF9D9500E48EC3 /* ViewController */,
 			);
 			path = project_iOS_DemoSet_OC;
 			sourceTree = "<group>";
@@ -243,17 +254,6 @@
 				7C029AEA21B0D48600E48EC3 /* slideView */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		7C029AE021AF9D9500E48EC3 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				0226D3CC21DB9186002B50B4 /* BYAvatarViewController.h */,
-				0226D3CD21DB9186002B50B4 /* BYAvatarViewController.m */,
-				0226D3DC21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.h */,
-				0226D3DD21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.m */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		7C029AE121AF9DC500E48EC3 /* ProjectFrame */ = {
