@@ -9,6 +9,8 @@
 #import "BYHomePageViewController.h"
 #import "BYSlideView.h"
 #import "BYStreamViewCell.h"
+#import "BYBannerSliderViewCell.h"
+#import "BYAvatarViewController.h"
 
 @interface BYHomePageViewController () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -36,12 +38,29 @@
 #pragma mark- Overwrite
 #pragma mark- Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    BYStreamViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BYStreamViewCell class])];
+    if (indexPath.row == 0) {
+        BYStreamViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BYStreamViewCell class])];
+        return cell;
+    }
+    BYBannerSliderViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BYBannerSliderViewCell class])];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return 150;
+    }
+    
+    return 196;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    BYAvatarViewController *avatarVC = [[BYAvatarViewController alloc] init];
+    [self.navigationController pushViewController:avatarVC animated:YES];
 }
 
 //判断滑动方向
@@ -94,8 +113,9 @@
         _tableView = [[UITableView alloc] init];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.estimatedRowHeight = 100;
+//        _tableView.estimatedRowHeight = 100;
         [_tableView registerClass:[BYStreamViewCell class] forCellReuseIdentifier:NSStringFromClass([BYStreamViewCell class])];
+        [_tableView registerClass:[BYBannerSliderViewCell class] forCellReuseIdentifier:NSStringFromClass([BYBannerSliderViewCell class])];
     }
     return _tableView;
 }
