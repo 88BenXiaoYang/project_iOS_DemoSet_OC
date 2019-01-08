@@ -39,11 +39,12 @@
 }
 
 - (void)placeSubViews {
-    [self addSubview:self.avaterBgView];
-    [self.avaterBgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.mas_equalTo(0);
-        make.width.height.mas_offset(64);
-    }];
+//    [self addSubview:self.avaterBgView];
+//    [self.avaterBgView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.center.mas_equalTo(0);
+//        make.width.height.mas_offset(64);
+//    }];
+    [self addSubview:self.avatarImageView];
 }
 
 #pragma mark- Setter and getter

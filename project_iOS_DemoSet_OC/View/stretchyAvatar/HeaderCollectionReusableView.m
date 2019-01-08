@@ -8,6 +8,7 @@
 
 #import "HeaderCollectionReusableView.h"
 #import "Masonry.h"
+#import "BYTools.h"
 
 @interface HeaderCollectionReusableView ()
 
@@ -44,7 +45,7 @@
 #pragma mark- Net request
 #pragma mark- Private methods
 - (void)prepare {
-    self.backgroundColor = [UIColor blueColor];
+    self.backgroundColor = [[BYTools shareTools] colorWithRGBHex:0x4c6ff9];
     self.screenWidth = [UIScreen mainScreen].bounds.size.width;
     self.screenHeight = [UIScreen mainScreen].bounds.size.height;
 }

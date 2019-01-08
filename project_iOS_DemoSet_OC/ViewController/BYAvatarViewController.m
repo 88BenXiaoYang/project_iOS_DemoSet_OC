@@ -12,11 +12,13 @@
 #import "StretchyHeaderCollectionViewLayout.h"
 #import "StretchyAvatarCustomNavigationView.h"
 #import "BYStretchyAvatarCollectionViewCell.h"
+#import "BYTools.h"
 
 @interface BYAvatarViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) StretchyHeaderCollectionViewLayout *stretchyLayout;
 @property (nonatomic, strong) StretchyAvatarCustomNavigationView *customNavigationView;
+@property (nonatomic, strong) UIView *customStatusView;
 @property (nonatomic, strong) UIImageView *avaImageView;
 @property (nonatomic, strong) UICollectionView *containerCollectionView;
 @property (nonatomic, assign) CGFloat screenWidth;
@@ -119,8 +121,21 @@
 }
 
 - (void)placeSubViews {
-    [self.view addSubview:self.containerCollectionView];
+    [self.view addSubview:self.customStatusView];
     [self.view addSubview:self.customNavigationView];
+    [self.view addSubview:self.containerCollectionView];
+    
+    [self.customNavigationView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        make.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(44);
+    }];
+    
+    [self.containerCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(0);
+        make.top.equalTo(self.customNavigationView.mas_bottom);
+        make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+    }];
 }
 
 -(void)changeNavAlphaWithConnentOffset:(CGFloat)offsetY {
@@ -158,11 +173,21 @@
 }
 
 #pragma mark- Setter and getter
+- (UIView *)customStatusView {
+    if (!_customStatusView) {
+        _customStatusView = [[UIView alloc] init];
+        _customStatusView.backgroundColor = [[BYTools shareTools] colorWithRGBHex:0x4c6ff9];
+    }
+    return _customStatusView;
+}
+
 - (StretchyAvatarCustomNavigationView *)customNavigationView {
     if (!_customNavigationView) {
-        _customNavigationView = [[StretchyAvatarCustomNavigationView alloc] initWithFrame:CGRectMake(0, 0, self.screenWidth, 64)];
-        [_customNavigationView.avatarImageView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_offset(23);
+//        _customNavigationView = [[StretchyAvatarCustomNavigationView alloc] initWithFrame:CGRectMake(0, 0, self.screenWidth, 64)];
+        _customNavigationView = [[StretchyAvatarCustomNavigationView alloc] init];
+        _customNavigationView.backgroundColor = [[BYTools shareTools] colorWithRGBHex:0x4c6ff9];
+        [_customNavigationView.avatarImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_offset(3.5);
             make.width.height.mas_offset(37);
             make.centerX.mas_equalTo(0);
         }];
@@ -186,7 +211,8 @@
 
 - (UICollectionView *)containerCollectionView {
     if (!_containerCollectionView) {
-        _containerCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.screenWidth, self.screenHeight) collectionViewLayout:self.stretchyLayout];
+//        _containerCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.screenWidth, self.screenHeight) collectionViewLayout:self.stretchyLayout];
+        _containerCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.stretchyLayout];
         _containerCollectionView.backgroundColor = [UIColor whiteColor];
         _containerCollectionView.alwaysBounceVertical = YES;
         _containerCollectionView.showsVerticalScrollIndicator = NO;
