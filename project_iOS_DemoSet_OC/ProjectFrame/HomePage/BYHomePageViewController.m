@@ -38,11 +38,16 @@
 #pragma mark- Overwrite
 #pragma mark- Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdenti"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.textLabel.text = @"头像列表";
+        return cell;
+    } else if (indexPath.row == 1) {
         BYStreamViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BYStreamViewCell class])];
         return cell;
     }
@@ -52,6 +57,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
+        return 50;
+    } else if (indexPath.row == 1) {
         return 150;
     }
     
@@ -59,8 +66,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    BYAvatarViewController *avatarVC = [[BYAvatarViewController alloc] init];
-    [self.navigationController pushViewController:avatarVC animated:YES];
+    if (indexPath.row == 0) {
+        BYAvatarViewController *avatarVC = [[BYAvatarViewController alloc] init];
+        avatarVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:avatarVC animated:YES];
+    }
 }
 
 //判断滑动方向

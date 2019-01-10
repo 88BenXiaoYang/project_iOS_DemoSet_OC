@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface StretchyAvatarCustomNavigationView : UIView
 
-@property (nonatomic, strong) UIImageView *avatarImageView;
+@property (nonatomic, strong) UIView *containerView;
+@property (nonatomic,   copy) void(^customNaviViewBackBlock)(void);
 
 @end
 
