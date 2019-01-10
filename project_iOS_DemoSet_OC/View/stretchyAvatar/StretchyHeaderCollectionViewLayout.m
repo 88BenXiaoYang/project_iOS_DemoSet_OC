@@ -29,12 +29,12 @@
         for (UICollectionViewLayoutAttributes *attrs in attributes) {
             NSString *kind = [attrs representedElementKind];
             if (kind == UICollectionElementKindSectionHeader) {
-                CGSize headerSize = [self headerReferenceSize];
+//                CGSize headerSize = [self headerReferenceSize];
                 CGRect headRect = [attrs frame];
-                headRect.size.height = headerSize.height + deltaY;
-                headRect.size.width = headerSize.width + deltaY;
+//                headRect.size.height = headerSize.height + deltaY;
+//                headRect.size.width = headerSize.width + deltaY;
                 headRect.origin.y = headRect.origin.y - deltaY;
-                headRect.origin.x = headRect.origin.x - deltaY/2;
+//                headRect.origin.x = headRect.origin.x - deltaY/2;
                 [attrs setFrame:headRect];
                 break;
             }

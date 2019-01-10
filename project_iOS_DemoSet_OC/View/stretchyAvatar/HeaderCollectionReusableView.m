@@ -13,6 +13,7 @@
 @interface HeaderCollectionReusableView ()
 
 @property (nonatomic, strong) UIView *containerView;
+@property (nonatomic, strong) UIView *contentContainerView;
 @property (nonatomic, strong) UIImageView *bgImageView;
 @property (nonatomic, assign) CGFloat screenWidth;
 @property (nonatomic, assign) CGFloat screenHeight;
@@ -34,7 +35,7 @@
 #pragma mark- Overwrite
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.bgImageView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+//    self.bgImageView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
     self.containerView.frame = CGRectMake(-self.frame.origin.x, -self.frame.origin.y, self.bounds.size.width, self.bounds.size.height);
 }
 
@@ -45,7 +46,7 @@
 #pragma mark- Net request
 #pragma mark- Private methods
 - (void)prepare {
-    self.backgroundColor = [[BYTools shareTools] colorWithRGBHex:0x4c6ff9];
+    self.backgroundColor = [UIColor clearColor];
     self.screenWidth = [UIScreen mainScreen].bounds.size.width;
     self.screenHeight = [UIScreen mainScreen].bounds.size.height;
 }
@@ -55,7 +56,7 @@
     [self addSubview:self.containerView];
     [self.bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(150);
+        make.height.mas_equalTo(130);
     }];
 }
 
@@ -63,13 +64,21 @@
 - (UIView *)containerView {
     if (!_containerView) {
         _containerView = [[UIView alloc] init];
-//        _containerView.backgroundColor = [UIColor redColor];
+        _containerView.backgroundColor = [UIColor clearColor];
         
+        [_containerView addSubview:self.contentContainerView];
         [_containerView addSubview:self.headerImageView];
+        
         [self.headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_offset(50);
+            make.top.mas_equalTo(5);
             make.left.mas_equalTo((self.screenWidth - 70)/2);
-            make.width.height.mas_offset(70);
+            make.width.height.mas_equalTo(70);
+        }];
+        
+        [self.contentContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(0);
+            make.left.mas_equalTo(10);
+            make.size.mas_equalTo(CGSizeMake(self.screenWidth - 20, 200 - 5));
         }];
     }
     return _containerView;
@@ -83,6 +92,24 @@
         _headerImageView.backgroundColor = [UIColor orangeColor];
     }
     return _headerImageView;
+}
+
+- (UIImageView *)bgImageView {
+    if (!_bgImageView) {
+        _bgImageView = [[UIImageView alloc] init];
+        _bgImageView.image = [UIImage imageNamed:@"headerbgimageview"];
+    }
+    return _bgImageView;
+}
+
+- (UIView *)contentContainerView {
+    if (!_contentContainerView) {
+        _contentContainerView = [[UIView alloc] init];
+        _contentContainerView.backgroundColor = [UIColor whiteColor];
+        _contentContainerView.layer.cornerRadius = 5;
+        _contentContainerView.layer.masksToBounds = YES;
+    }
+    return _contentContainerView;
 }
 
 @end

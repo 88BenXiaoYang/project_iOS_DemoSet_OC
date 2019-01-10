@@ -20,6 +20,7 @@
 @property (nonatomic, strong) StretchyAvatarCustomNavigationView *customNavigationView;
 @property (nonatomic, strong) UIView *customStatusView;
 @property (nonatomic, strong) UIImageView *avaImageView;
+@property (nonatomic, strong) UIImageView *collectionBgImageView;
 @property (nonatomic, strong) UICollectionView *containerCollectionView;
 @property (nonatomic, assign) CGFloat screenWidth;
 @property (nonatomic, assign) CGFloat screenHeight;
@@ -48,13 +49,17 @@
 }
 
 #pragma mark- Overwrite
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 #pragma mark- Delegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 10;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 1;
+    return 10;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -87,7 +92,7 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.view.frame.size.width/2, 100);
+    return CGSizeMake(self.screenWidth, 160);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
@@ -125,6 +130,11 @@
     [self.view addSubview:self.customNavigationView];
     [self.view addSubview:self.containerCollectionView];
     
+    [self.customStatusView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.mas_equalTo(0);
+        make.bottom.equalTo(self.customNavigationView);
+    }];
+    
     [self.customNavigationView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
         make.left.right.mas_equalTo(0);
@@ -144,30 +154,25 @@
         CGFloat d = 56;
         CGFloat imageReduce = 1-(offsetY-startChangeOffset)/(d*3);
         CGFloat alpha = MIN(1,(offsetY + 20)/100);
+        self.customNavigationView.containerView.alpha = (alpha <= 0.2) ? 0.0 : alpha;
         CGAffineTransform t = CGAffineTransformMakeTranslation(0,(1-alpha));
         self.avaImageView.transform = CGAffineTransformScale(t,imageReduce, imageReduce);
         if (offsetY > 50) {
             [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
-                self.customNavigationView.backgroundColor          =  [UIColor redColor];
-                
+//                self.customNavigationView.alpha = alpha;
             }completion:^(BOOL finished) {
             }];
             if (alpha > 0.5)
             {
                 [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                    self.customNavigationView.avatarImageView.hidden = NO;
                     self.avaImageView.hidden = YES;
                 } completion:^(BOOL finished) {
                 }];
-            }else
-            {
+            } else {
                 self.avaImageView.hidden = NO;
-                
             }
         }else{
             self.avaImageView.hidden = NO;
-            self.customNavigationView.avatarImageView.hidden = YES;
-            self.customNavigationView.backgroundColor          = [UIColor clearColor];
         }
     }
 }
@@ -183,20 +188,13 @@
 
 - (StretchyAvatarCustomNavigationView *)customNavigationView {
     if (!_customNavigationView) {
-//        _customNavigationView = [[StretchyAvatarCustomNavigationView alloc] initWithFrame:CGRectMake(0, 0, self.screenWidth, 64)];
         _customNavigationView = [[StretchyAvatarCustomNavigationView alloc] init];
         _customNavigationView.backgroundColor = [[BYTools shareTools] colorWithRGBHex:0x4c6ff9];
-        [_customNavigationView.avatarImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_offset(3.5);
-            make.width.height.mas_offset(37);
-            make.centerX.mas_equalTo(0);
-        }];
-        _customNavigationView.avatarImageView.backgroundColor = [UIColor orangeColor];
-        _customNavigationView.avatarImageView.layer.cornerRadius = 37/2;
-        _customNavigationView.avatarImageView.layer.masksToBounds=YES;
-//        _customNavigationView.avatarImageView.layer.borderWidth=1;
-//        _customNavigationView.avatarImageView.layer.borderColor=[UIColor whiteColor].CGColor;
-        _customNavigationView.avatarImageView.hidden = YES;
+        _customNavigationView.containerView.alpha = 0;
+        __weak typeof(BYAvatarViewController) *weakself = self;
+        _customNavigationView.customNaviViewBackBlock = ^{
+            [weakself.navigationController popViewControllerAnimated:YES];
+        };
     }
     return _customNavigationView;
 }
@@ -209,9 +207,16 @@
     return _stretchyLayout;
 }
 
+- (UIImageView *)collectionBgImageView {
+    if (!_collectionBgImageView) {
+        _collectionBgImageView = [[UIImageView alloc] init];
+        _collectionBgImageView.image = [UIImage imageNamed:@"listbgimageview"];
+    }
+    return _collectionBgImageView;
+}
+
 - (UICollectionView *)containerCollectionView {
     if (!_containerCollectionView) {
-//        _containerCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.screenWidth, self.screenHeight) collectionViewLayout:self.stretchyLayout];
         _containerCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.stretchyLayout];
         _containerCollectionView.backgroundColor = [UIColor whiteColor];
         _containerCollectionView.alwaysBounceVertical = YES;
@@ -219,6 +224,7 @@
         _containerCollectionView.showsHorizontalScrollIndicator = NO;
         _containerCollectionView.dataSource = self;
         _containerCollectionView.delegate = self;
+        _containerCollectionView.backgroundView = self.collectionBgImageView;
         
         [_containerCollectionView registerClass:[HeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([HeaderCollectionReusableView class])];
         [_containerCollectionView registerClass:[BYStretchyAvatarCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([BYStretchyAvatarCollectionViewCell class])];
