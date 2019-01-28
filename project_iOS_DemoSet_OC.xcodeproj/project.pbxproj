@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		0226D3C721D7D361002B50B4 /* BYBannerSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3C621D7D361002B50B4 /* BYBannerSlideView.m */; };
 		0226D3CB21D7E270002B50B4 /* BYBannerSliderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3CA21D7E270002B50B4 /* BYBannerSliderViewCell.m */; };
-		0226D3CE21DB9186002B50B4 /* BYAvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3CD21DB9186002B50B4 /* BYAvatarViewController.m */; };
 		0226D3D521DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3D421DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.m */; };
 		0226D3D821DBA83E002B50B4 /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3D721DBA83E002B50B4 /* HeaderCollectionReusableView.m */; };
 		0226D3DB21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3DA21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m */; };
-		0226D3DE21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3DD21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.m */; };
 		02CFA38421AEDA5300BCE056 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CFA38321AEDA5300BCE056 /* AppDelegate.m */; };
 		02CFA38A21AEDA5300BCE056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CFA38821AEDA5300BCE056 /* Main.storyboard */; };
 		02CFA38C21AEDA5500BCE056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CFA38B21AEDA5500BCE056 /* Assets.xcassets */; };
@@ -24,6 +22,14 @@
 		7C029AE621AF9F6700E48EC3 /* BYVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AE521AF9F6700E48EC3 /* BYVCManager.m */; };
 		7C029AE921AFA08600E48EC3 /* BYHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AE821AFA08600E48EC3 /* BYHomePageViewController.m */; };
 		7C029AED21B0D4B000E48EC3 /* BYSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AEC21B0D4B000E48EC3 /* BYSlideView.m */; };
+		7CC627C421F95D50006D6EFA /* SAMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC627C321F95D50006D6EFA /* SAMTextView.m */; };
+		7CC627C721F95DBF006D6EFA /* BYContentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC627C621F95DBF006D6EFA /* BYContentInputView.m */; };
+		7CC627CC21F95EA2006D6EFA /* BYContentInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC627CB21F95EA2006D6EFA /* BYContentInputViewController.m */; };
+		7CC627DA21FA012D006D6EFA /* BYAvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC627D921FA012D006D6EFA /* BYAvatarViewController.m */; };
+		7CC627DC21FA013A006D6EFA /* BYStretchyAvatarCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC627DB21FA013A006D6EFA /* BYStretchyAvatarCollectionViewCell.m */; };
+		7CC627E021FD4871006D6EFA /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC627DF21FD4871006D6EFA /* NSString+Tools.m */; };
+		7CC627E421FEB9AF006D6EFA /* BYInputVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC627E321FEB9AF006D6EFA /* BYInputVCCell.m */; };
+		7CC627E721FEC078006D6EFA /* BYInputModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC627E621FEC078006D6EFA /* BYInputModel.m */; };
 		7CDBEB6721BF5CF800FEC89A /* BYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDBEB6621BF5CF800FEC89A /* BYTools.m */; };
 		7CEA53A321D3A31C0072C7C1 /* BYStreamViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEA53A221D3A31C0072C7C1 /* BYStreamViewCell.m */; };
 		7CEA53C321D3A5FB0072C7C1 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEA53AA21D3A5FA0072C7C1 /* NSArray+MASAdditions.m */; };
@@ -60,16 +66,12 @@
 		0226D3C621D7D361002B50B4 /* BYBannerSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYBannerSlideView.m; sourceTree = "<group>"; };
 		0226D3C921D7E270002B50B4 /* BYBannerSliderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYBannerSliderViewCell.h; sourceTree = "<group>"; };
 		0226D3CA21D7E270002B50B4 /* BYBannerSliderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYBannerSliderViewCell.m; sourceTree = "<group>"; };
-		0226D3CC21DB9186002B50B4 /* BYAvatarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYAvatarViewController.h; path = project_iOS_DemoSet_OC/ViewController/BYAvatarViewController.h; sourceTree = SOURCE_ROOT; };
-		0226D3CD21DB9186002B50B4 /* BYAvatarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BYAvatarViewController.m; path = project_iOS_DemoSet_OC/ViewController/BYAvatarViewController.m; sourceTree = SOURCE_ROOT; };
 		0226D3D321DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StretchyHeaderCollectionViewLayout.h; sourceTree = "<group>"; };
 		0226D3D421DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StretchyHeaderCollectionViewLayout.m; sourceTree = "<group>"; };
 		0226D3D621DBA83E002B50B4 /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
 		0226D3D721DBA83E002B50B4 /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		0226D3D921DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StretchyAvatarCustomNavigationView.h; sourceTree = "<group>"; };
 		0226D3DA21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StretchyAvatarCustomNavigationView.m; sourceTree = "<group>"; };
-		0226D3DC21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYStretchyAvatarCollectionViewCell.h; path = project_iOS_DemoSet_OC/ViewController/BYStretchyAvatarCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		0226D3DD21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BYStretchyAvatarCollectionViewCell.m; path = project_iOS_DemoSet_OC/ViewController/BYStretchyAvatarCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		02CFA37F21AEDA5300BCE056 /* project_iOS_DemoSet_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project_iOS_DemoSet_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CFA38221AEDA5300BCE056 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		02CFA38321AEDA5300BCE056 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +92,23 @@
 		7C029AE821AFA08600E48EC3 /* BYHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYHomePageViewController.m; sourceTree = "<group>"; };
 		7C029AEB21B0D4B000E48EC3 /* BYSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSlideView.h; sourceTree = "<group>"; };
 		7C029AEC21B0D4B000E48EC3 /* BYSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYSlideView.m; sourceTree = "<group>"; };
+		7CC627C221F95D50006D6EFA /* SAMTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMTextView.h; sourceTree = "<group>"; };
+		7CC627C321F95D50006D6EFA /* SAMTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMTextView.m; sourceTree = "<group>"; };
+		7CC627C521F95DBF006D6EFA /* BYContentInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYContentInputView.h; sourceTree = "<group>"; };
+		7CC627C621F95DBF006D6EFA /* BYContentInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYContentInputView.m; sourceTree = "<group>"; };
+		7CC627CA21F95EA2006D6EFA /* BYContentInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYContentInputViewController.h; sourceTree = "<group>"; };
+		7CC627CB21F95EA2006D6EFA /* BYContentInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYContentInputViewController.m; sourceTree = "<group>"; };
+		7CC627D721FA012C006D6EFA /* BYStretchyAvatarCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYStretchyAvatarCollectionViewCell.h; sourceTree = "<group>"; };
+		7CC627D821FA012D006D6EFA /* BYAvatarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYAvatarViewController.h; sourceTree = "<group>"; };
+		7CC627D921FA012D006D6EFA /* BYAvatarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYAvatarViewController.m; sourceTree = "<group>"; };
+		7CC627DB21FA013A006D6EFA /* BYStretchyAvatarCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYStretchyAvatarCollectionViewCell.m; sourceTree = "<group>"; };
+		7CC627DE21FD4871006D6EFA /* NSString+Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Tools.h"; sourceTree = "<group>"; };
+		7CC627DF21FD4871006D6EFA /* NSString+Tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Tools.m"; sourceTree = "<group>"; };
+		7CC627E121FD49BA006D6EFA /* CommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
+		7CC627E221FEB9AF006D6EFA /* BYInputVCCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYInputVCCell.h; sourceTree = "<group>"; };
+		7CC627E321FEB9AF006D6EFA /* BYInputVCCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYInputVCCell.m; sourceTree = "<group>"; };
+		7CC627E521FEC078006D6EFA /* BYInputModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYInputModel.h; sourceTree = "<group>"; };
+		7CC627E621FEC078006D6EFA /* BYInputModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYInputModel.m; sourceTree = "<group>"; };
 		7CDBEB6521BF5CF800FEC89A /* BYTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYTools.h; sourceTree = "<group>"; };
 		7CDBEB6621BF5CF800FEC89A /* BYTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYTools.m; sourceTree = "<group>"; };
 		7CEA53A121D3A31C0072C7C1 /* BYStreamViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYStreamViewCell.h; sourceTree = "<group>"; };
@@ -180,10 +199,9 @@
 		0226D3DF21DBC915002B50B4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0226D3CC21DB9186002B50B4 /* BYAvatarViewController.h */,
-				0226D3CD21DB9186002B50B4 /* BYAvatarViewController.m */,
-				0226D3DC21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.h */,
-				0226D3DD21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.m */,
+				7C029AE221AF9E5600E48EC3 /* HomePage */,
+				7CC627C921F95E6A006D6EFA /* InputViewVC */,
+				7CC627C821F95E59006D6EFA /* StretchyAvatarVC */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -211,7 +229,6 @@
 		02CFA38121AEDA5300BCE056 /* project_iOS_DemoSet_OC */ = {
 			isa = PBXGroup;
 			children = (
-				0226D3DF21DBC915002B50B4 /* ViewController */,
 				7CEA53A421D3A4AE0072C7C1 /* ThirdSDK */,
 				7CDBEB6421BF5CA700FEC89A /* Common */,
 				02CFA38221AEDA5300BCE056 /* AppDelegate.h */,
@@ -248,6 +265,7 @@
 		7C029ADF21AF9D8100E48EC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7CC627C121F95D06006D6EFA /* InputView */,
 				0226D3CF21DBA38A002B50B4 /* stretchyAvatar */,
 				0226D3C421D7D344002B50B4 /* bannerSlideView */,
 				7CEA539D21D3A2A90072C7C1 /* streamView */,
@@ -259,9 +277,9 @@
 		7C029AE121AF9DC500E48EC3 /* ProjectFrame */ = {
 			isa = PBXGroup;
 			children = (
+				0226D3DF21DBC915002B50B4 /* ViewController */,
 				0226D3C821D7E23C002B50B4 /* View */,
 				7C029AE321AF9ED000E48EC3 /* VCManager */,
-				7C029AE221AF9E5600E48EC3 /* HomePage */,
 			);
 			path = ProjectFrame;
 			sourceTree = "<group>";
@@ -293,11 +311,57 @@
 			path = slideView;
 			sourceTree = "<group>";
 		};
+		7CC627C121F95D06006D6EFA /* InputView */ = {
+			isa = PBXGroup;
+			children = (
+				7CC627C221F95D50006D6EFA /* SAMTextView.h */,
+				7CC627C321F95D50006D6EFA /* SAMTextView.m */,
+				7CC627C521F95DBF006D6EFA /* BYContentInputView.h */,
+				7CC627C621F95DBF006D6EFA /* BYContentInputView.m */,
+			);
+			path = InputView;
+			sourceTree = "<group>";
+		};
+		7CC627C821F95E59006D6EFA /* StretchyAvatarVC */ = {
+			isa = PBXGroup;
+			children = (
+				7CC627D821FA012D006D6EFA /* BYAvatarViewController.h */,
+				7CC627D921FA012D006D6EFA /* BYAvatarViewController.m */,
+				7CC627D721FA012C006D6EFA /* BYStretchyAvatarCollectionViewCell.h */,
+				7CC627DB21FA013A006D6EFA /* BYStretchyAvatarCollectionViewCell.m */,
+			);
+			path = StretchyAvatarVC;
+			sourceTree = "<group>";
+		};
+		7CC627C921F95E6A006D6EFA /* InputViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				7CC627CA21F95EA2006D6EFA /* BYContentInputViewController.h */,
+				7CC627CB21F95EA2006D6EFA /* BYContentInputViewController.m */,
+				7CC627E221FEB9AF006D6EFA /* BYInputVCCell.h */,
+				7CC627E321FEB9AF006D6EFA /* BYInputVCCell.m */,
+				7CC627E521FEC078006D6EFA /* BYInputModel.h */,
+				7CC627E621FEC078006D6EFA /* BYInputModel.m */,
+			);
+			path = InputViewVC;
+			sourceTree = "<group>";
+		};
+		7CC627DD21FD47F7006D6EFA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7CC627DE21FD4871006D6EFA /* NSString+Tools.h */,
+				7CC627DF21FD4871006D6EFA /* NSString+Tools.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		7CDBEB6421BF5CA700FEC89A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7CC627DD21FD47F7006D6EFA /* Categories */,
 				7CDBEB6521BF5CF800FEC89A /* BYTools.h */,
 				7CDBEB6621BF5CF800FEC89A /* BYTools.m */,
+				7CC627E121FD49BA006D6EFA /* CommonDefine.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -488,23 +552,29 @@
 				0226D3CB21D7E270002B50B4 /* BYBannerSliderViewCell.m in Sources */,
 				0226D3D821DBA83E002B50B4 /* HeaderCollectionReusableView.m in Sources */,
 				7CEA53A321D3A31C0072C7C1 /* BYStreamViewCell.m in Sources */,
+				7CC627DA21FA012D006D6EFA /* BYAvatarViewController.m in Sources */,
+				7CC627E721FEC078006D6EFA /* BYInputModel.m in Sources */,
 				7CEA53C821D3A5FB0072C7C1 /* MASCompositeConstraint.m in Sources */,
 				7CEA53CB21D3A5FB0072C7C1 /* MASConstraintMaker.m in Sources */,
+				7CC627C721F95DBF006D6EFA /* BYContentInputView.m in Sources */,
 				02CFA38421AEDA5300BCE056 /* AppDelegate.m in Sources */,
+				7CC627E021FD4871006D6EFA /* NSString+Tools.m in Sources */,
 				7CEA53C321D3A5FB0072C7C1 /* NSArray+MASAdditions.m in Sources */,
+				7CC627E421FEB9AF006D6EFA /* BYInputVCCell.m in Sources */,
 				0226D3D521DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.m in Sources */,
+				7CC627DC21FA013A006D6EFA /* BYStretchyAvatarCollectionViewCell.m in Sources */,
 				7CEA53CA21D3A5FB0072C7C1 /* MASLayoutConstraint.m in Sources */,
 				0226D3C721D7D361002B50B4 /* BYBannerSlideView.m in Sources */,
+				7CC627C421F95D50006D6EFA /* SAMTextView.m in Sources */,
 				7C029AED21B0D4B000E48EC3 /* BYSlideView.m in Sources */,
 				7CEA53C521D3A5FB0072C7C1 /* ViewController+MASAdditions.m in Sources */,
 				7CDBEB6721BF5CF800FEC89A /* BYTools.m in Sources */,
+				7CC627CC21F95EA2006D6EFA /* BYContentInputViewController.m in Sources */,
 				7C029AE621AF9F6700E48EC3 /* BYVCManager.m in Sources */,
 				7CEA53C921D3A5FB0072C7C1 /* MASViewConstraint.m in Sources */,
-				0226D3CE21DB9186002B50B4 /* BYAvatarViewController.m in Sources */,
 				7CEA53C421D3A5FB0072C7C1 /* View+MASAdditions.m in Sources */,
 				7CEA53CC21D3A5FB0072C7C1 /* MASConstraint.m in Sources */,
 				7CEA53C721D3A5FB0072C7C1 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				0226D3DE21DBBFCE002B50B4 /* BYStretchyAvatarCollectionViewCell.m in Sources */,
 				0226D3DB21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

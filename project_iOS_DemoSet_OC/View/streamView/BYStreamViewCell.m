@@ -46,7 +46,7 @@
 
 - (void)placeSubViews {
     UILabel *titleLab = [[UILabel alloc] init];
-    titleLab.text = @"哈哈哈哈哈哈哈";
+    titleLab.text = @"文本标签流";
     [titleLab sizeToFit];
     [self.contentView addSubview:titleLab];
     [titleLab mas_makeConstraints:^(MASConstraintMaker *make) {

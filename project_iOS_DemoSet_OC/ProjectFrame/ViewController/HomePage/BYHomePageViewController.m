@@ -11,6 +11,7 @@
 #import "BYStreamViewCell.h"
 #import "BYBannerSliderViewCell.h"
 #import "BYAvatarViewController.h"
+#import "BYContentInputViewController.h"
 
 @interface BYHomePageViewController () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -38,7 +39,7 @@
 #pragma mark- Overwrite
 #pragma mark- Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -48,17 +49,23 @@
         cell.textLabel.text = @"头像列表";
         return cell;
     } else if (indexPath.row == 1) {
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"inputCellIdenti"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.textLabel.text = @"内容输入";
+        return cell;
+    } else if (indexPath.row == 2) {
         BYStreamViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BYStreamViewCell class])];
         return cell;
     }
+    
     BYBannerSliderViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BYBannerSliderViewCell class])];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0 || indexPath.row == 1) {
         return 50;
-    } else if (indexPath.row == 1) {
+    } else if (indexPath.row == 2) {
         return 150;
     }
     
@@ -70,6 +77,10 @@
         BYAvatarViewController *avatarVC = [[BYAvatarViewController alloc] init];
         avatarVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:avatarVC animated:YES];
+    } else if (indexPath.row == 1) {
+        BYContentInputViewController *contentInputVC = [[BYContentInputViewController alloc] init];
+        contentInputVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:contentInputVC animated:YES];
     }
 }
 
