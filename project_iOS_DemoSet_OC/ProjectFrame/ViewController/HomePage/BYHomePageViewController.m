@@ -12,6 +12,8 @@
 #import "BYBannerSliderViewCell.h"
 #import "BYAvatarViewController.h"
 #import "BYContentInputViewController.h"
+#import "BYThreadHandleViewController.h"
+#import "BYSuspendViewController.h"
 
 @interface BYHomePageViewController () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -39,21 +41,19 @@
 #pragma mark- Overwrite
 #pragma mark- Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdenti"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.textLabel.text = @"头像列表";
-        return cell;
+        return [self createCellWithTitle:@"头像列表" identifier:@"cellIdenti"];
     } else if (indexPath.row == 1) {
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"inputCellIdenti"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.textLabel.text = @"内容输入";
-        return cell;
+        return [self createCellWithTitle:@"内容输入" identifier:@"inputCellIdenti"];
     } else if (indexPath.row == 2) {
+        return [self createCellWithTitle:@"线程保活" identifier:@"threadKeepAliveIdenti"];
+    } else if (indexPath.row == 3) {
+        return [self createCellWithTitle:@"悬浮视图" identifier:@"suspendViewIdenti"];
+    } else if (indexPath.row == 4) {
         BYStreamViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BYStreamViewCell class])];
         return cell;
     }
@@ -63,9 +63,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0 || indexPath.row == 1) {
+    if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2) {
         return 50;
-    } else if (indexPath.row == 2) {
+    } else if (indexPath.row == 3) {
         return 150;
     }
     
@@ -81,6 +81,14 @@
         BYContentInputViewController *contentInputVC = [[BYContentInputViewController alloc] init];
         contentInputVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:contentInputVC animated:YES];
+    } else if (indexPath.row == 2) {
+        BYThreadHandleViewController *threadHandleVC = [[BYThreadHandleViewController alloc] init];
+        threadHandleVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:threadHandleVC animated:YES];
+    } else if (indexPath.row == 3) {
+        BYSuspendViewController *suspendVC = [[BYSuspendViewController alloc] init];
+        suspendVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:suspendVC animated:YES];
     }
 }
 
@@ -126,6 +134,14 @@
     
     [self.view addSubview:self.tableView];
     self.tableView.frame = CGRectMake(0, CGRectGetMaxY(slideView.frame), self.screenWidth, self.screenHeight - CGRectGetMaxY(slideView.frame));
+}
+
+- (UITableViewCell *)createCellWithTitle:(NSString *)title identifier:(NSString *)identifier {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.text = title;
+    
+    return cell;
 }
 
 #pragma mark- Setter and getter

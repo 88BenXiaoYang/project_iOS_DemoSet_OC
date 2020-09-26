@@ -12,6 +12,9 @@
 		0226D3D521DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3D421DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.m */; };
 		0226D3D821DBA83E002B50B4 /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3D721DBA83E002B50B4 /* HeaderCollectionReusableView.m */; };
 		0226D3DB21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3DA21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m */; };
+		02AE6DD1251EEAA000116C1E /* BYSuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6DD0251EEAA000116C1E /* BYSuspendView.m */; };
+		02AE6DDB251EEBAA00116C1E /* BYSuspendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6DDA251EEBAA00116C1E /* BYSuspendViewController.m */; };
+		02CB8A952509CE8C008BCD59 /* BYThreadHandleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB8A942509CE8C008BCD59 /* BYThreadHandleViewController.m */; };
 		02CFA38421AEDA5300BCE056 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CFA38321AEDA5300BCE056 /* AppDelegate.m */; };
 		02CFA38A21AEDA5300BCE056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CFA38821AEDA5300BCE056 /* Main.storyboard */; };
 		02CFA38C21AEDA5500BCE056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CFA38B21AEDA5500BCE056 /* Assets.xcassets */; };
@@ -72,6 +75,12 @@
 		0226D3D721DBA83E002B50B4 /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		0226D3D921DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StretchyAvatarCustomNavigationView.h; sourceTree = "<group>"; };
 		0226D3DA21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StretchyAvatarCustomNavigationView.m; sourceTree = "<group>"; };
+		02AE6DCF251EEAA000116C1E /* BYSuspendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSuspendView.h; sourceTree = "<group>"; };
+		02AE6DD0251EEAA000116C1E /* BYSuspendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYSuspendView.m; sourceTree = "<group>"; };
+		02AE6DD9251EEBAA00116C1E /* BYSuspendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSuspendViewController.h; sourceTree = "<group>"; };
+		02AE6DDA251EEBAA00116C1E /* BYSuspendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYSuspendViewController.m; sourceTree = "<group>"; };
+		02CB8A932509CE8C008BCD59 /* BYThreadHandleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYThreadHandleViewController.h; sourceTree = "<group>"; };
+		02CB8A942509CE8C008BCD59 /* BYThreadHandleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYThreadHandleViewController.m; sourceTree = "<group>"; };
 		02CFA37F21AEDA5300BCE056 /* project_iOS_DemoSet_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project_iOS_DemoSet_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CFA38221AEDA5300BCE056 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		02CFA38321AEDA5300BCE056 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -199,11 +208,40 @@
 		0226D3DF21DBC915002B50B4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				02AE6DD8251EEB7200116C1E /* SuspendVC */,
+				02CB8A922509CE28008BCD59 /* ThreadHandleVC */,
 				7C029AE221AF9E5600E48EC3 /* HomePage */,
 				7CC627C921F95E6A006D6EFA /* InputViewVC */,
 				7CC627C821F95E59006D6EFA /* StretchyAvatarVC */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		02AE6DCE251EEA6600116C1E /* suspendView */ = {
+			isa = PBXGroup;
+			children = (
+				02AE6DCF251EEAA000116C1E /* BYSuspendView.h */,
+				02AE6DD0251EEAA000116C1E /* BYSuspendView.m */,
+			);
+			path = suspendView;
+			sourceTree = "<group>";
+		};
+		02AE6DD8251EEB7200116C1E /* SuspendVC */ = {
+			isa = PBXGroup;
+			children = (
+				02AE6DD9251EEBAA00116C1E /* BYSuspendViewController.h */,
+				02AE6DDA251EEBAA00116C1E /* BYSuspendViewController.m */,
+			);
+			path = SuspendVC;
+			sourceTree = "<group>";
+		};
+		02CB8A922509CE28008BCD59 /* ThreadHandleVC */ = {
+			isa = PBXGroup;
+			children = (
+				02CB8A932509CE8C008BCD59 /* BYThreadHandleViewController.h */,
+				02CB8A942509CE8C008BCD59 /* BYThreadHandleViewController.m */,
+			);
+			path = ThreadHandleVC;
 			sourceTree = "<group>";
 		};
 		02CFA37621AEDA5300BCE056 = {
@@ -265,6 +303,7 @@
 		7C029ADF21AF9D8100E48EC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				02AE6DCE251EEA6600116C1E /* suspendView */,
 				7CC627C121F95D06006D6EFA /* InputView */,
 				0226D3CF21DBA38A002B50B4 /* stretchyAvatar */,
 				0226D3C421D7D344002B50B4 /* bannerSlideView */,
@@ -548,6 +587,7 @@
 			files = (
 				02CFA39221AEDA5500BCE056 /* main.m in Sources */,
 				7CEA53C621D3A5FB0072C7C1 /* MASViewAttribute.m in Sources */,
+				02AE6DD1251EEAA000116C1E /* BYSuspendView.m in Sources */,
 				7C029AE921AFA08600E48EC3 /* BYHomePageViewController.m in Sources */,
 				0226D3CB21D7E270002B50B4 /* BYBannerSliderViewCell.m in Sources */,
 				0226D3D821DBA83E002B50B4 /* HeaderCollectionReusableView.m in Sources */,
@@ -560,6 +600,7 @@
 				02CFA38421AEDA5300BCE056 /* AppDelegate.m in Sources */,
 				7CC627E021FD4871006D6EFA /* NSString+Tools.m in Sources */,
 				7CEA53C321D3A5FB0072C7C1 /* NSArray+MASAdditions.m in Sources */,
+				02AE6DDB251EEBAA00116C1E /* BYSuspendViewController.m in Sources */,
 				7CC627E421FEB9AF006D6EFA /* BYInputVCCell.m in Sources */,
 				0226D3D521DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.m in Sources */,
 				7CC627DC21FA013A006D6EFA /* BYStretchyAvatarCollectionViewCell.m in Sources */,
@@ -573,6 +614,7 @@
 				7C029AE621AF9F6700E48EC3 /* BYVCManager.m in Sources */,
 				7CEA53C921D3A5FB0072C7C1 /* MASViewConstraint.m in Sources */,
 				7CEA53C421D3A5FB0072C7C1 /* View+MASAdditions.m in Sources */,
+				02CB8A952509CE8C008BCD59 /* BYThreadHandleViewController.m in Sources */,
 				7CEA53CC21D3A5FB0072C7C1 /* MASConstraint.m in Sources */,
 				7CEA53C721D3A5FB0072C7C1 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				0226D3DB21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m in Sources */,
