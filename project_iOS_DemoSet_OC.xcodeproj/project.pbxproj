@@ -14,6 +14,7 @@
 		0226D3DB21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3DA21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m */; };
 		02AE6DD1251EEAA000116C1E /* BYSuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6DD0251EEAA000116C1E /* BYSuspendView.m */; };
 		02AE6DDB251EEBAA00116C1E /* BYSuspendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6DDA251EEBAA00116C1E /* BYSuspendViewController.m */; };
+		02AE6DE7251F42AB00116C1E /* BYSuspendContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6DE6251F42AB00116C1E /* BYSuspendContentCell.m */; };
 		02CB8A952509CE8C008BCD59 /* BYThreadHandleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB8A942509CE8C008BCD59 /* BYThreadHandleViewController.m */; };
 		02CFA38421AEDA5300BCE056 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CFA38321AEDA5300BCE056 /* AppDelegate.m */; };
 		02CFA38A21AEDA5300BCE056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CFA38821AEDA5300BCE056 /* Main.storyboard */; };
@@ -79,6 +80,8 @@
 		02AE6DD0251EEAA000116C1E /* BYSuspendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYSuspendView.m; sourceTree = "<group>"; };
 		02AE6DD9251EEBAA00116C1E /* BYSuspendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSuspendViewController.h; sourceTree = "<group>"; };
 		02AE6DDA251EEBAA00116C1E /* BYSuspendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYSuspendViewController.m; sourceTree = "<group>"; };
+		02AE6DE5251F42AB00116C1E /* BYSuspendContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSuspendContentCell.h; sourceTree = "<group>"; };
+		02AE6DE6251F42AB00116C1E /* BYSuspendContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYSuspendContentCell.m; sourceTree = "<group>"; };
 		02CB8A932509CE8C008BCD59 /* BYThreadHandleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYThreadHandleViewController.h; sourceTree = "<group>"; };
 		02CB8A942509CE8C008BCD59 /* BYThreadHandleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYThreadHandleViewController.m; sourceTree = "<group>"; };
 		02CFA37F21AEDA5300BCE056 /* project_iOS_DemoSet_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project_iOS_DemoSet_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +225,8 @@
 			children = (
 				02AE6DCF251EEAA000116C1E /* BYSuspendView.h */,
 				02AE6DD0251EEAA000116C1E /* BYSuspendView.m */,
+				02AE6DE5251F42AB00116C1E /* BYSuspendContentCell.h */,
+				02AE6DE6251F42AB00116C1E /* BYSuspendContentCell.m */,
 			);
 			path = suspendView;
 			sourceTree = "<group>";
@@ -598,6 +603,7 @@
 				7CEA53CB21D3A5FB0072C7C1 /* MASConstraintMaker.m in Sources */,
 				7CC627C721F95DBF006D6EFA /* BYContentInputView.m in Sources */,
 				02CFA38421AEDA5300BCE056 /* AppDelegate.m in Sources */,
+				02AE6DE7251F42AB00116C1E /* BYSuspendContentCell.m in Sources */,
 				7CC627E021FD4871006D6EFA /* NSString+Tools.m in Sources */,
 				7CEA53C321D3A5FB0072C7C1 /* NSArray+MASAdditions.m in Sources */,
 				02AE6DDB251EEBAA00116C1E /* BYSuspendViewController.m in Sources */,
