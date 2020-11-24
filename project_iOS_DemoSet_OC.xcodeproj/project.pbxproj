@@ -12,6 +12,9 @@
 		0226D3D521DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3D421DBA5BA002B50B4 /* StretchyHeaderCollectionViewLayout.m */; };
 		0226D3D821DBA83E002B50B4 /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3D721DBA83E002B50B4 /* HeaderCollectionReusableView.m */; };
 		0226D3DB21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0226D3DA21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m */; };
+		024E1ED7253FFC6D00A46C2C /* BYCustomeDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 024E1ED6253FFC6D00A46C2C /* BYCustomeDatePickerView.m */; };
+		024E1EE12540235F00A46C2C /* BYDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 024E1EE02540235F00A46C2C /* BYDatePickerViewController.m */; };
+		024E1FAB254A991900A46C2C /* MasonryPracticeAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 024E1FAA254A991900A46C2C /* MasonryPracticeAViewController.m */; };
 		02AE6DD1251EEAA000116C1E /* BYSuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6DD0251EEAA000116C1E /* BYSuspendView.m */; };
 		02AE6DDB251EEBAA00116C1E /* BYSuspendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6DDA251EEBAA00116C1E /* BYSuspendViewController.m */; };
 		02AE6DE7251F42AB00116C1E /* BYSuspendContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6DE6251F42AB00116C1E /* BYSuspendContentCell.m */; };
@@ -76,6 +79,12 @@
 		0226D3D721DBA83E002B50B4 /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		0226D3D921DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StretchyAvatarCustomNavigationView.h; sourceTree = "<group>"; };
 		0226D3DA21DBB1A9002B50B4 /* StretchyAvatarCustomNavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StretchyAvatarCustomNavigationView.m; sourceTree = "<group>"; };
+		024E1ED5253FFC6D00A46C2C /* BYCustomeDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYCustomeDatePickerView.h; sourceTree = "<group>"; };
+		024E1ED6253FFC6D00A46C2C /* BYCustomeDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYCustomeDatePickerView.m; sourceTree = "<group>"; };
+		024E1EDF2540235F00A46C2C /* BYDatePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYDatePickerViewController.h; sourceTree = "<group>"; };
+		024E1EE02540235F00A46C2C /* BYDatePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYDatePickerViewController.m; sourceTree = "<group>"; };
+		024E1FA9254A991900A46C2C /* MasonryPracticeAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryPracticeAViewController.h; sourceTree = "<group>"; };
+		024E1FAA254A991900A46C2C /* MasonryPracticeAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryPracticeAViewController.m; sourceTree = "<group>"; };
 		02AE6DCF251EEAA000116C1E /* BYSuspendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSuspendView.h; sourceTree = "<group>"; };
 		02AE6DD0251EEAA000116C1E /* BYSuspendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYSuspendView.m; sourceTree = "<group>"; };
 		02AE6DD9251EEBAA00116C1E /* BYSuspendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSuspendViewController.h; sourceTree = "<group>"; };
@@ -211,6 +220,8 @@
 		0226D3DF21DBC915002B50B4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				024E1FA8254A98FA00A46C2C /* MasonryVC */,
+				024E1EDE2540232B00A46C2C /* DatePickerVC */,
 				02AE6DD8251EEB7200116C1E /* SuspendVC */,
 				02CB8A922509CE28008BCD59 /* ThreadHandleVC */,
 				7C029AE221AF9E5600E48EC3 /* HomePage */,
@@ -218,6 +229,33 @@
 				7CC627C821F95E59006D6EFA /* StretchyAvatarVC */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		024E1ED4253FFC2F00A46C2C /* customeDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				024E1ED5253FFC6D00A46C2C /* BYCustomeDatePickerView.h */,
+				024E1ED6253FFC6D00A46C2C /* BYCustomeDatePickerView.m */,
+			);
+			path = customeDatePickerView;
+			sourceTree = "<group>";
+		};
+		024E1EDE2540232B00A46C2C /* DatePickerVC */ = {
+			isa = PBXGroup;
+			children = (
+				024E1EDF2540235F00A46C2C /* BYDatePickerViewController.h */,
+				024E1EE02540235F00A46C2C /* BYDatePickerViewController.m */,
+			);
+			path = DatePickerVC;
+			sourceTree = "<group>";
+		};
+		024E1FA8254A98FA00A46C2C /* MasonryVC */ = {
+			isa = PBXGroup;
+			children = (
+				024E1FA9254A991900A46C2C /* MasonryPracticeAViewController.h */,
+				024E1FAA254A991900A46C2C /* MasonryPracticeAViewController.m */,
+			);
+			path = MasonryVC;
 			sourceTree = "<group>";
 		};
 		02AE6DCE251EEA6600116C1E /* suspendView */ = {
@@ -308,6 +346,7 @@
 		7C029ADF21AF9D8100E48EC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				024E1ED4253FFC2F00A46C2C /* customeDatePickerView */,
 				02AE6DCE251EEA6600116C1E /* suspendView */,
 				7CC627C121F95D06006D6EFA /* InputView */,
 				0226D3CF21DBA38A002B50B4 /* stretchyAvatar */,
@@ -592,9 +631,11 @@
 			files = (
 				02CFA39221AEDA5500BCE056 /* main.m in Sources */,
 				7CEA53C621D3A5FB0072C7C1 /* MASViewAttribute.m in Sources */,
+				024E1FAB254A991900A46C2C /* MasonryPracticeAViewController.m in Sources */,
 				02AE6DD1251EEAA000116C1E /* BYSuspendView.m in Sources */,
 				7C029AE921AFA08600E48EC3 /* BYHomePageViewController.m in Sources */,
 				0226D3CB21D7E270002B50B4 /* BYBannerSliderViewCell.m in Sources */,
+				024E1EE12540235F00A46C2C /* BYDatePickerViewController.m in Sources */,
 				0226D3D821DBA83E002B50B4 /* HeaderCollectionReusableView.m in Sources */,
 				7CEA53A321D3A31C0072C7C1 /* BYStreamViewCell.m in Sources */,
 				7CC627DA21FA012D006D6EFA /* BYAvatarViewController.m in Sources */,
@@ -602,6 +643,7 @@
 				7CEA53C821D3A5FB0072C7C1 /* MASCompositeConstraint.m in Sources */,
 				7CEA53CB21D3A5FB0072C7C1 /* MASConstraintMaker.m in Sources */,
 				7CC627C721F95DBF006D6EFA /* BYContentInputView.m in Sources */,
+				024E1ED7253FFC6D00A46C2C /* BYCustomeDatePickerView.m in Sources */,
 				02CFA38421AEDA5300BCE056 /* AppDelegate.m in Sources */,
 				02AE6DE7251F42AB00116C1E /* BYSuspendContentCell.m in Sources */,
 				7CC627E021FD4871006D6EFA /* NSString+Tools.m in Sources */,

@@ -14,6 +14,8 @@
 #import "BYContentInputViewController.h"
 #import "BYThreadHandleViewController.h"
 #import "BYSuspendViewController.h"
+#import "BYDatePickerViewController.h"
+#import "MasonryPracticeAViewController.h"
 
 @interface BYHomePageViewController () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -41,7 +43,7 @@
 #pragma mark- Overwrite
 #pragma mark- Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,6 +56,10 @@
     } else if (indexPath.row == 3) {
         return [self createCellWithTitle:@"悬浮视图" identifier:@"suspendViewIdenti"];
     } else if (indexPath.row == 4) {
+        return [self createCellWithTitle:@"时间选择" identifier:@"datePickerViewIdenti"];
+    } else if (indexPath.row == 5) {
+        return [self createCellWithTitle:@"Masonry布局" identifier:@"masonryViewIdenti"];
+    } else {
         BYStreamViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BYStreamViewCell class])];
         return cell;
     }
@@ -63,9 +69,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3) {
+    if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4 || indexPath.row == 5) {
         return 50;
-    } else if (indexPath.row == 4) {
+    } else if (indexPath.row == 6) {
         return 150;
     }
     
@@ -89,6 +95,14 @@
         BYSuspendViewController *suspendVC = [[BYSuspendViewController alloc] init];
         suspendVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:suspendVC animated:YES];
+    } else if (indexPath.row == 4) {
+        BYDatePickerViewController *datePickerVC = [[BYDatePickerViewController alloc] init];
+        datePickerVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:datePickerVC animated:YES];
+    } else if (indexPath.row == 5) {
+        MasonryPracticeAViewController *masonryVC = [[MasonryPracticeAViewController alloc] init];
+        masonryVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:masonryVC animated:YES];
     }
 }
 
