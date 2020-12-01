@@ -26,6 +26,8 @@
 		02CFA39221AEDA5500BCE056 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CFA39121AEDA5500BCE056 /* main.m */; };
 		02CFA39C21AEDA5500BCE056 /* project_iOS_DemoSet_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CFA39B21AEDA5500BCE056 /* project_iOS_DemoSet_OCTests.m */; };
 		02CFA3A721AEDA5500BCE056 /* project_iOS_DemoSet_OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CFA3A621AEDA5500BCE056 /* project_iOS_DemoSet_OCUITests.m */; };
+		02DD9CF72574BE3D0030478F /* BYDateformatterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DD9CF62574BE3D0030478F /* BYDateformatterView.m */; };
+		02DD9D012574BE960030478F /* BYDateFormatterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DD9D002574BE960030478F /* BYDateFormatterVC.m */; };
 		7C029AE621AF9F6700E48EC3 /* BYVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AE521AF9F6700E48EC3 /* BYVCManager.m */; };
 		7C029AE921AFA08600E48EC3 /* BYHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AE821AFA08600E48EC3 /* BYHomePageViewController.m */; };
 		7C029AED21B0D4B000E48EC3 /* BYSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AEC21B0D4B000E48EC3 /* BYSlideView.m */; };
@@ -107,6 +109,10 @@
 		02CFA3A221AEDA5500BCE056 /* project_iOS_DemoSet_OCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = project_iOS_DemoSet_OCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CFA3A621AEDA5500BCE056 /* project_iOS_DemoSet_OCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = project_iOS_DemoSet_OCUITests.m; sourceTree = "<group>"; };
 		02CFA3A821AEDA5500BCE056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02DD9CF52574BE3D0030478F /* BYDateformatterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYDateformatterView.h; sourceTree = "<group>"; };
+		02DD9CF62574BE3D0030478F /* BYDateformatterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYDateformatterView.m; sourceTree = "<group>"; };
+		02DD9CFF2574BE960030478F /* BYDateFormatterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYDateFormatterVC.h; sourceTree = "<group>"; };
+		02DD9D002574BE960030478F /* BYDateFormatterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYDateFormatterVC.m; sourceTree = "<group>"; };
 		7C029AE421AF9F6700E48EC3 /* BYVCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYVCManager.h; sourceTree = "<group>"; };
 		7C029AE521AF9F6700E48EC3 /* BYVCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYVCManager.m; sourceTree = "<group>"; };
 		7C029AE721AFA08600E48EC3 /* BYHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYHomePageViewController.h; sourceTree = "<group>"; };
@@ -220,6 +226,7 @@
 		0226D3DF21DBC915002B50B4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				02DD9CFE2574BE5C0030478F /* DateFormatterVC */,
 				024E1FA8254A98FA00A46C2C /* MasonryVC */,
 				024E1EDE2540232B00A46C2C /* DatePickerVC */,
 				02AE6DD8251EEB7200116C1E /* SuspendVC */,
@@ -343,9 +350,28 @@
 			path = project_iOS_DemoSet_OCUITests;
 			sourceTree = "<group>";
 		};
+		02DD9CF42574BDE10030478F /* dateformatterView */ = {
+			isa = PBXGroup;
+			children = (
+				02DD9CF52574BE3D0030478F /* BYDateformatterView.h */,
+				02DD9CF62574BE3D0030478F /* BYDateformatterView.m */,
+			);
+			path = dateformatterView;
+			sourceTree = "<group>";
+		};
+		02DD9CFE2574BE5C0030478F /* DateFormatterVC */ = {
+			isa = PBXGroup;
+			children = (
+				02DD9CFF2574BE960030478F /* BYDateFormatterVC.h */,
+				02DD9D002574BE960030478F /* BYDateFormatterVC.m */,
+			);
+			path = DateFormatterVC;
+			sourceTree = "<group>";
+		};
 		7C029ADF21AF9D8100E48EC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				02DD9CF42574BDE10030478F /* dateformatterView */,
 				024E1ED4253FFC2F00A46C2C /* customeDatePickerView */,
 				02AE6DCE251EEA6600116C1E /* suspendView */,
 				7CC627C121F95D06006D6EFA /* InputView */,
@@ -635,6 +661,7 @@
 				02AE6DD1251EEAA000116C1E /* BYSuspendView.m in Sources */,
 				7C029AE921AFA08600E48EC3 /* BYHomePageViewController.m in Sources */,
 				0226D3CB21D7E270002B50B4 /* BYBannerSliderViewCell.m in Sources */,
+				02DD9D012574BE960030478F /* BYDateFormatterVC.m in Sources */,
 				024E1EE12540235F00A46C2C /* BYDatePickerViewController.m in Sources */,
 				0226D3D821DBA83E002B50B4 /* HeaderCollectionReusableView.m in Sources */,
 				7CEA53A321D3A31C0072C7C1 /* BYStreamViewCell.m in Sources */,
@@ -647,6 +674,7 @@
 				02CFA38421AEDA5300BCE056 /* AppDelegate.m in Sources */,
 				02AE6DE7251F42AB00116C1E /* BYSuspendContentCell.m in Sources */,
 				7CC627E021FD4871006D6EFA /* NSString+Tools.m in Sources */,
+				02DD9CF72574BE3D0030478F /* BYDateformatterView.m in Sources */,
 				7CEA53C321D3A5FB0072C7C1 /* NSArray+MASAdditions.m in Sources */,
 				02AE6DDB251EEBAA00116C1E /* BYSuspendViewController.m in Sources */,
 				7CC627E421FEB9AF006D6EFA /* BYInputVCCell.m in Sources */,

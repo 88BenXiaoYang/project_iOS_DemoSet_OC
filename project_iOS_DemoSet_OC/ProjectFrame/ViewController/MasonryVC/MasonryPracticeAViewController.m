@@ -411,7 +411,7 @@
 {
     if (numPerRow != 0) {
         if (totalNum < numPerRow) {
-            return index == numPerRow - 1;
+            return index == totalNum - 1;
         }
         return index%numPerRow == numPerRow - 1;
     }

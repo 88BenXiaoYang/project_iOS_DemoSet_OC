@@ -16,6 +16,7 @@
 #import "BYSuspendViewController.h"
 #import "BYDatePickerViewController.h"
 #import "MasonryPracticeAViewController.h"
+#import "BYDateFormatterVC.h"
 
 @interface BYHomePageViewController () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -43,7 +44,7 @@
 #pragma mark- Overwrite
 #pragma mark- Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 7;
+    return 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -59,6 +60,8 @@
         return [self createCellWithTitle:@"时间选择" identifier:@"datePickerViewIdenti"];
     } else if (indexPath.row == 5) {
         return [self createCellWithTitle:@"Masonry布局" identifier:@"masonryViewIdenti"];
+    } else if (indexPath.row == 6) {
+        return [self createCellWithTitle:@"DateFormatter" identifier:@"dateformatterIdenti"];;
     } else {
         BYStreamViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BYStreamViewCell class])];
         return cell;
@@ -69,9 +72,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4 || indexPath.row == 5) {
+    if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4 || indexPath.row == 5 || indexPath.row == 6) {
         return 50;
-    } else if (indexPath.row == 6) {
+    } else if (indexPath.row == 7) {
         return 150;
     }
     
@@ -103,6 +106,10 @@
         MasonryPracticeAViewController *masonryVC = [[MasonryPracticeAViewController alloc] init];
         masonryVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:masonryVC animated:YES];
+    } else if (indexPath.row == 6) {
+        BYDateFormatterVC *dateformatterVC = [[BYDateFormatterVC alloc] init];
+        dateformatterVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:dateformatterVC animated:YES];
     }
 }
 
