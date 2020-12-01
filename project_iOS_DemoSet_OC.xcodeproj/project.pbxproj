@@ -29,6 +29,8 @@
 		02CFA3A721AEDA5500BCE056 /* project_iOS_DemoSet_OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CFA3A621AEDA5500BCE056 /* project_iOS_DemoSet_OCUITests.m */; };
 		02DD9CF72574BE3D0030478F /* BYDateformatterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DD9CF62574BE3D0030478F /* BYDateformatterView.m */; };
 		02DD9D012574BE960030478F /* BYDateFormatterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DD9D002574BE960030478F /* BYDateFormatterVC.m */; };
+		02DD9D0E25762DE00030478F /* dateformatter.html in Resources */ = {isa = PBXBuildFile; fileRef = 02DD9D0D25762DE00030478F /* dateformatter.html */; };
+		02DD9D1725762E4E0030478F /* BYDateFormatterLoadHTMLVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DD9D1625762E4E0030478F /* BYDateFormatterLoadHTMLVC.m */; };
 		7C029AE621AF9F6700E48EC3 /* BYVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AE521AF9F6700E48EC3 /* BYVCManager.m */; };
 		7C029AE921AFA08600E48EC3 /* BYHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AE821AFA08600E48EC3 /* BYHomePageViewController.m */; };
 		7C029AED21B0D4B000E48EC3 /* BYSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C029AEC21B0D4B000E48EC3 /* BYSlideView.m */; };
@@ -116,6 +118,9 @@
 		02DD9CF62574BE3D0030478F /* BYDateformatterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYDateformatterView.m; sourceTree = "<group>"; };
 		02DD9CFF2574BE960030478F /* BYDateFormatterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYDateFormatterVC.h; sourceTree = "<group>"; };
 		02DD9D002574BE960030478F /* BYDateFormatterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYDateFormatterVC.m; sourceTree = "<group>"; };
+		02DD9D0D25762DE00030478F /* dateformatter.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dateformatter.html; sourceTree = "<group>"; };
+		02DD9D1525762E4E0030478F /* BYDateFormatterLoadHTMLVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYDateFormatterLoadHTMLVC.h; sourceTree = "<group>"; };
+		02DD9D1625762E4E0030478F /* BYDateFormatterLoadHTMLVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYDateFormatterLoadHTMLVC.m; sourceTree = "<group>"; };
 		7C029AE421AF9F6700E48EC3 /* BYVCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYVCManager.h; sourceTree = "<group>"; };
 		7C029AE521AF9F6700E48EC3 /* BYVCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYVCManager.m; sourceTree = "<group>"; };
 		7C029AE721AFA08600E48EC3 /* BYHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYHomePageViewController.h; sourceTree = "<group>"; };
@@ -369,8 +374,18 @@
 			children = (
 				02DD9CFF2574BE960030478F /* BYDateFormatterVC.h */,
 				02DD9D002574BE960030478F /* BYDateFormatterVC.m */,
+				02DD9D1525762E4E0030478F /* BYDateFormatterLoadHTMLVC.h */,
+				02DD9D1625762E4E0030478F /* BYDateFormatterLoadHTMLVC.m */,
 			);
 			path = DateFormatterVC;
+			sourceTree = "<group>";
+		};
+		02DD9D0C25762CD50030478F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				02DD9D0D25762DE00030478F /* dateformatter.html */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		7C029ADF21AF9D8100E48EC3 /* View */ = {
@@ -391,6 +406,7 @@
 		7C029AE121AF9DC500E48EC3 /* ProjectFrame */ = {
 			isa = PBXGroup;
 			children = (
+				02DD9D0C25762CD50030478F /* Source */,
 				0226D3DF21DBC915002B50B4 /* ViewController */,
 				0226D3C821D7E23C002B50B4 /* View */,
 				7C029AE321AF9ED000E48EC3 /* VCManager */,
@@ -636,6 +652,7 @@
 				02CFA38F21AEDA5500BCE056 /* LaunchScreen.storyboard in Resources */,
 				02CFA38C21AEDA5500BCE056 /* Assets.xcassets in Resources */,
 				02CFA38A21AEDA5300BCE056 /* Main.storyboard in Resources */,
+				02DD9D0E25762DE00030478F /* dateformatter.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +705,7 @@
 				7CC627DC21FA013A006D6EFA /* BYStretchyAvatarCollectionViewCell.m in Sources */,
 				7CEA53CA21D3A5FB0072C7C1 /* MASLayoutConstraint.m in Sources */,
 				0226D3C721D7D361002B50B4 /* BYBannerSlideView.m in Sources */,
+				02DD9D1725762E4E0030478F /* BYDateFormatterLoadHTMLVC.m in Sources */,
 				7CC627C421F95D50006D6EFA /* SAMTextView.m in Sources */,
 				7C029AED21B0D4B000E48EC3 /* BYSlideView.m in Sources */,
 				7CEA53C521D3A5FB0072C7C1 /* ViewController+MASAdditions.m in Sources */,

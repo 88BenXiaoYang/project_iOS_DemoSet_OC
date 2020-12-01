@@ -8,6 +8,8 @@
 
 #import "BYDateFormatterVC.h"
 #import "Masonry.h"
+#import "CommonDefine.h"
+#import "BYDateFormatterLoadHTMLVC.h"
 
 typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
     BYTimeStyleType_M_d_yy = 1000,
@@ -18,7 +20,8 @@ typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
     BYTimeStyleType_hh_mm_tt,
     BYTimeStyleType_h_mm_ss_t,
     BYTimeStyleType_H_mm_ss,
-    BYTimeStyleType_M_d_yyyy_H_mm
+    BYTimeStyleType_M_d_yyyy_H_mm,
+    BYTimeStyleTypeHTML
 };
 
 @interface BYDateFormatterVC ()
@@ -91,6 +94,12 @@ typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
             [self.dateFormatter setDateFormat:@"M/d/yyyy H:mm"];
         }
             break;
+        case BYTimeStyleTypeHTML:
+        {
+            BYDateFormatterLoadHTMLVC *vc = [[BYDateFormatterLoadHTMLVC alloc] init];
+            [self.navigationController presentViewController:vc animated:YES completion:nil];
+        }
+            break;
     }
     self.timeLab.text = [self.dateFormatter stringFromDate:[NSDate date]];
 }
@@ -115,7 +124,7 @@ typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
 {
     //由子视图决定父视图大小
     UIView *containerView = [[UIView alloc] init];
-    containerView.backgroundColor = [UIColor orangeColor];
+    containerView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:containerView];
     
     [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -169,7 +178,7 @@ typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
         NSInteger tag = [self.styleArray[i][@"tag"] integerValue];
         UIButton *lab = [self createBtnWithTitle:titStr];
         lab.tag = tag;
-        lab.backgroundColor = [UIColor colorWithRed:random()%256/255.0 green:random()%256/255.0 blue:random()%256/255.0 alpha:1.0];
+        lab.backgroundColor = [UIColor orangeColor];
         [superView addSubview:lab];
         [cells addObject:lab];
     }
@@ -266,7 +275,6 @@ typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
     for (NSInteger i = 0; i < totalNum; i ++) {
         NSString *titStr = self.ruleArray[i];
         UILabel *lab = [self createLabWithTitle:titStr];
-//        lab.backgroundColor = [UIColor colorWithRed:random()%256/255.0 green:random()%256/255.0 blue:random()%256/255.0 alpha:1.0];
         [superView addSubview:lab];
         [cells addObject:lab];
     }
@@ -416,7 +424,7 @@ typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
 - (UILabel *)timeLab {
     if (!_timeLab) {
         _timeLab = [[UILabel alloc] init];
-        _timeLab.backgroundColor = [UIColor purpleColor];
+        _timeLab.backgroundColor = [UIColor whiteColor];
         _timeLab.font = [UIFont systemFontOfSize:14];
         _timeLab.textAlignment = NSTextAlignmentCenter;
         _timeLab.textColor = [UIColor blackColor];
@@ -471,7 +479,8 @@ typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
                         @{@"title":@"hh:mm tt",@"tag":@(BYTimeStyleType_hh_mm_tt)},
                         @{@"title":@"h:mm:ss t",@"tag":@(BYTimeStyleType_h_mm_ss_t)},
                         @{@"title":@"H:mm:ss",@"tag":@(BYTimeStyleType_H_mm_ss)},
-                        @{@"title":@"M/d/yyyy H:mm",@"tag":@(BYTimeStyleType_M_d_yyyy_H_mm)}];
+                        @{@"title":@"M/d/yyyy H:mm",@"tag":@(BYTimeStyleType_M_d_yyyy_H_mm)},
+                        @{@"title":@"Go_HTML",@"tag":@(BYTimeStyleTypeHTML)}];
     }
     return _styleArray;
 }
