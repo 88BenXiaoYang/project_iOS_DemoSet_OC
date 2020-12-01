@@ -53,7 +53,7 @@
     } else if (indexPath.row == 1) {
         return [self createCellWithTitle:@"内容输入" identifier:@"inputCellIdenti"];
     } else if (indexPath.row == 2) {
-        return [self createCellWithTitle:@"线程保活" identifier:@"threadKeepAliveIdenti"];
+        return [self createCellWithTitle:@"线程保活/定时器" identifier:@"threadKeepAliveIdenti"];
     } else if (indexPath.row == 3) {
         return [self createCellWithTitle:@"悬浮视图" identifier:@"suspendViewIdenti"];
     } else if (indexPath.row == 4) {

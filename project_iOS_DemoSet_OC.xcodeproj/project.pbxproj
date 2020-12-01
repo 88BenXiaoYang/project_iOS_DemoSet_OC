@@ -15,6 +15,7 @@
 		024E1ED7253FFC6D00A46C2C /* BYCustomeDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 024E1ED6253FFC6D00A46C2C /* BYCustomeDatePickerView.m */; };
 		024E1EE12540235F00A46C2C /* BYDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 024E1EE02540235F00A46C2C /* BYDatePickerViewController.m */; };
 		024E1FAB254A991900A46C2C /* MasonryPracticeAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 024E1FAA254A991900A46C2C /* MasonryPracticeAViewController.m */; };
+		024E2066256D48A800A46C2C /* BYTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 024E2065256D48A800A46C2C /* BYTimer.m */; };
 		02AE6DD1251EEAA000116C1E /* BYSuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6DD0251EEAA000116C1E /* BYSuspendView.m */; };
 		02AE6DDB251EEBAA00116C1E /* BYSuspendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6DDA251EEBAA00116C1E /* BYSuspendViewController.m */; };
 		02AE6DE7251F42AB00116C1E /* BYSuspendContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6DE6251F42AB00116C1E /* BYSuspendContentCell.m */; };
@@ -87,6 +88,8 @@
 		024E1EE02540235F00A46C2C /* BYDatePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYDatePickerViewController.m; sourceTree = "<group>"; };
 		024E1FA9254A991900A46C2C /* MasonryPracticeAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryPracticeAViewController.h; sourceTree = "<group>"; };
 		024E1FAA254A991900A46C2C /* MasonryPracticeAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryPracticeAViewController.m; sourceTree = "<group>"; };
+		024E2064256D48A800A46C2C /* BYTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYTimer.h; sourceTree = "<group>"; };
+		024E2065256D48A800A46C2C /* BYTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYTimer.m; sourceTree = "<group>"; };
 		02AE6DCF251EEAA000116C1E /* BYSuspendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSuspendView.h; sourceTree = "<group>"; };
 		02AE6DD0251EEAA000116C1E /* BYSuspendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYSuspendView.m; sourceTree = "<group>"; };
 		02AE6DD9251EEBAA00116C1E /* BYSuspendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSuspendViewController.h; sourceTree = "<group>"; };
@@ -290,6 +293,8 @@
 			children = (
 				02CB8A932509CE8C008BCD59 /* BYThreadHandleViewController.h */,
 				02CB8A942509CE8C008BCD59 /* BYThreadHandleViewController.m */,
+				024E2064256D48A800A46C2C /* BYTimer.h */,
+				024E2065256D48A800A46C2C /* BYTimer.m */,
 			);
 			path = ThreadHandleVC;
 			sourceTree = "<group>";
@@ -655,6 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024E2066256D48A800A46C2C /* BYTimer.m in Sources */,
 				02CFA39221AEDA5500BCE056 /* main.m in Sources */,
 				7CEA53C621D3A5FB0072C7C1 /* MASViewAttribute.m in Sources */,
 				024E1FAB254A991900A46C2C /* MasonryPracticeAViewController.m in Sources */,
