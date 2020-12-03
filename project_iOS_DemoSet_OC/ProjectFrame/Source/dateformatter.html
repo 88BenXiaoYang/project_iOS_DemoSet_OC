@@ -7,7 +7,7 @@
 <UL>
 <LI><a href="#create">地区</a></LI>
 <LI><a href="#edit">表格</a></LI>
-<LI><a href="#delete">Delete</a></LI>
+<LI><a href="#delete">自定义月份星期等字符</a></LI>
 <LI><a href="#mail">Mail</a></LI>
 </UL>
 <p>
@@ -457,9 +457,54 @@ vi-VN 越南 -越南<br />
 </p>
 <p>
 <a name="delete"></a>
-<strong>Delete:</strong><BR>
-You can delete notes by selecting the edit button in the upper left corner on the main list page.  This will enable
-the standard list editing function to allow you to delete notes.
+<strong>自定义月份星期等字符:</strong><BR>
+NSDateFormatter中提供了相应的方式，去修改这些字符。一般情况下，使用相应区域语言下面的默认字符就OK了。但如的确有这个需求，可以通过下面的方法实现。<br />
+<br />
+Managing AM and PM Symbols<br />  
+　　– AMSymbol<br />
+　　– setAMSymbol:<br />  
+　　– PMSymbol<br />  
+　　– setPMSymbol:<br />  
+Managing Weekday Symbols<br />  
+　　– weekdaySymbols<br />  
+　　– setWeekdaySymbols:<br />  
+　　– shortWeekdaySymbols<br />  
+　　– setShortWeekdaySymbols:<br />  
+　　– veryShortWeekdaySymbols<br />  
+　　– setVeryShortWeekdaySymbols:<br />  
+　　– standaloneWeekdaySymbols<br />  
+　　– setStandaloneWeekdaySymbols:<br />  
+　　– shortStandaloneWeekdaySymbols<br />  
+　　– setShortStandaloneWeekdaySymbols:<br />  
+　　– veryShortStandaloneWeekdaySymbols<br />  
+　　– setVeryShortStandaloneWeekdaySymbols:<br />  
+Managing Month Symbols<br />  
+　　– monthSymbols<br />  
+　　– setMonthSymbols:<br />  
+　　– shortMonthSymbols<br />  
+　　– setShortMonthSymbols:<br />  
+　　– veryShortMonthSymbols<br />  
+　　– setVeryShortMonthSymbols:<br />  
+　　– standaloneMonthSymbols<br />  
+　　– setStandaloneMonthSymbols:<br />  
+　　– shortStandaloneMonthSymbols<br />  
+　　– setShortStandaloneMonthSymbols:<br />  
+　　– veryShortStandaloneMonthSymbols<br />  
+　　– setVeryShortStandaloneMonthSymbols:<br />  
+Managing Quarter Symbols<br />  
+　　– quarterSymbols<br />  
+　　– setQuarterSymbols:<br />  
+　　– shortQuarterSymbols<br />  
+　　– setShortQuarterSymbols:<br />  
+　　– standaloneQuarterSymbols<br />  
+　　– setStandaloneQuarterSymbols:<br />  
+　　– shortStandaloneQuarterSymbols<br />  
+　　– setShortStandaloneQuarterSymbols:<br />  
+Managing Era Symbols<br />  
+　　– eraSymbols<br />  
+　　– setEraSymbols:<br />  
+　　– longEraSymbols<br />  
+　　– setLongEraSymbols:<br />  
 </p>
 <p>
 <a name="mail"></a>

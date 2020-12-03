@@ -21,7 +21,9 @@ typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
     BYTimeStyleType_h_mm_ss_t,
     BYTimeStyleType_H_mm_ss,
     BYTimeStyleType_M_d_yyyy_H_mm,
-    BYTimeStyleTypeHTML
+    BYTimeStyleTypeHTML,
+    BYTimeStyleTypeShortTime,
+    BYTimeStyleTypeCustomStyle
 };
 
 @interface BYDateFormatterVC ()
@@ -98,6 +100,24 @@ typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
         {
             BYDateFormatterLoadHTMLVC *vc = [[BYDateFormatterLoadHTMLVC alloc] init];
             [self.navigationController presentViewController:vc animated:YES completion:nil];
+        }
+            break;
+        case BYTimeStyleTypeShortTime:
+        {
+            //LongStyle有时区信息
+            self.dateFormatter.dateStyle = kCFDateFormatterShortStyle;
+            self.dateFormatter.timeStyle = kCFDateFormatterShortStyle;
+            self.dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+        }
+            break;
+        case BYTimeStyleTypeCustomStyle:
+        {
+            //在格式化时间字符串中添加定制的文本
+            NSString *dateStr = [NSString stringWithFormat:@"'%@' YYYY-MM-dd '%@' HH:mm:ss", @"今天是", @"天气:晴"];
+            [self.dateFormatter setDateFormat:dateStr];
+            
+//            self.dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+//            [self.dateFormatter setDateFormat:@"yyyy-MM-dd a HH:mm:ss EEEE"];
         }
             break;
     }
@@ -428,6 +448,7 @@ typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
         _timeLab.font = [UIFont systemFontOfSize:14];
         _timeLab.textAlignment = NSTextAlignmentCenter;
         _timeLab.textColor = [UIColor blackColor];
+        _timeLab.numberOfLines = 0;
         _timeLab.text = [self.dateFormatter stringFromDate:[NSDate date]];
     }
     return _timeLab;
@@ -480,7 +501,9 @@ typedef NS_ENUM(NSUInteger, BYTimeStyleType) {
                         @{@"title":@"h:mm:ss t",@"tag":@(BYTimeStyleType_h_mm_ss_t)},
                         @{@"title":@"H:mm:ss",@"tag":@(BYTimeStyleType_H_mm_ss)},
                         @{@"title":@"M/d/yyyy H:mm",@"tag":@(BYTimeStyleType_M_d_yyyy_H_mm)},
-                        @{@"title":@"Go_HTML",@"tag":@(BYTimeStyleTypeHTML)}];
+                        @{@"title":@"short_time",@"tag":@(BYTimeStyleTypeShortTime)},
+                        @{@"title":@"Go_HTML",@"tag":@(BYTimeStyleTypeHTML)},
+                        @{@"title":@"Custom_Style",@"tag":@(BYTimeStyleTypeCustomStyle)}];
     }
     return _styleArray;
 }
